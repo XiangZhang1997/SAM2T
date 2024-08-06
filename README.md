@@ -11,6 +11,8 @@ To train the model on the DRIVE dataset, run the following command:
 ```bash
 python /home/s1/ZX/job/Vessel/train.py -dp "/home/s1/ZX/job/Vessel/datasets/DRIVE" --val
 
+
+## Usage
 ### 2. Test the Model
 
 To test the model on the DRIVE dataset, run the following command:
