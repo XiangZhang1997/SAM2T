@@ -1,4 +1,5 @@
 # SAM2T
+![](https://img.shields.io/badge/license-MIT-blue)
 The official implementation of SAM2T
 
 python /home/s1/ZX/job/Vessel/train.py -dp "/home/s1/ZX/job/Vessel/datasets/DRIVE" --val 
