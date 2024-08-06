@@ -1,2 +1,2 @@
 # SAM2T
-update
+The official implementation of SAM2T
