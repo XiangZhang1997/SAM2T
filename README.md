@@ -36,7 +36,7 @@ This script calculates various evaluation metrics for the segmentation results.
 1. Ensure that the segmentation results and ground truth maps are available.
 2. Run the script to calculate metrics using the following command:
     ```bash
-    python /home/s1/ZX/job/Vessel/FR_UNet/c_metrics.py -dp "/home/s1/ZX/job/Vessel/datasets/DRIVE"
+    python /home/s1/ZX/job/Vessel/c_metrics.py -dp "/home/s1/ZX/job/Vessel/datasets/DRIVE"
     ```
 
 ## Example
@@ -50,7 +50,7 @@ This script calculates various evaluation metrics for the segmentation results.
     ```
 3. **Metrics**: Calculate performance metrics:
     ```bash
-    python /home/s1/ZX/job/Vessel/FR_UNet/c_metrics.py -dp "/home/s1/ZX/job/Vessel/datasets/DRIVE"
+    python /home/s1/ZX/job/Vessel/c_metrics.py -dp "/home/s1/ZX/job/Vessel/datasets/DRIVE"
     ```
 
 ## Requirements
