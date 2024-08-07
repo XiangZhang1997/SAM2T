@@ -1,6 +1,6 @@
-# SAM2T Project
+# SAM2T——A Lightweight yet Effective Scale-Aware Micro to Macro Transition Network for Retinal Vessel Segmentation
 ![](https://img.shields.io/badge/license-MIT-blue)
-The official implementation of SAM2T——A Lightweight yet Effective Scale-Aware Micro to Macro Transition Network for Retinal Vessel Segmentation
+The official implementation of SAM2T
 
 ## Overview
 SAM2T is a project for vessel segmentation using deep learning techniques. This repository contains scripts for training, testing, and evaluating models on the retinal datasets.
