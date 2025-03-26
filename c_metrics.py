@@ -60,27 +60,26 @@ class Metrics(Trainer):
                     if self.CFG.CCC:
                         self.CCC.update(count_connect_component(
                             pre, gt, threshold=self.CFG.threshold))
+                    if self.CFG.CCQ:
+                        self._metrics_ccq_update(
+                            *clDice(pre, gt).values())
                 tbar.set_description(
                     'TEST ({}) | AUC {:.4f} F1 {:.4f} Acc {:.4f}  Sen {:.4f} Spe {:.4f} MCC {:.4f} IOU {:.4f}|'.format(
                         i, *self._metrics_ave().values()))
-                
-                L.append(self._metrics_ave()) 
-                tic = time.time()
-                count += 1
-            sum_dict = {}
+                tbar.set_description(
+                    'TEST ({}) | cldice {:.4f} hd95 {:.4f}|'.format(
+                        i, *self._metrics_ccq_ave().values()))
 
-            for d in L:
-                for key, value in d.items():
-                    sum_dict[key] = sum_dict.get(key, 0) + value
-
-            print(count)
-            n = 4
-            new_strings = []
-            for k, v in sum_dict.items():
-
-                results = f'{str(k):4s}: {np.round(v/count, n)}'
-                logger.info(results) 
-                new_strings.append(np.round(v/count, n))
+        LL = []
+        print("*" * 100)
+        for k, v in self._metrics_ave().items():
+            LL.append(v)
+            logger.info(f'{str(k):5s}: {v}')
+        print("LL",LL)
+        for k, v in self._metrics_ccq_ave().items():
+            logger.info(f'{str(k):5s}: {v}')
+        if self.CFG.CCC:
+            logger.info(f'     CCC:  {self.CCC.average}')
 
 def main(data_path, CFG):
 
